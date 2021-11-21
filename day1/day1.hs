@@ -10,10 +10,7 @@ findExpenseSetWhereSumEquals sumN expense setSize = product . head . filter ((==
 
 findAnswer = findExpenseSetWhereSumEquals 2020 expenses
 
-answer1 = findAnswer 2
-answer2 = findAnswer 3
-
 main = 
   do
-    print answer1
-    print answer2
+    print (findAnswer 2) -- task 1
+    print (findAnswer 3) -- task 2
