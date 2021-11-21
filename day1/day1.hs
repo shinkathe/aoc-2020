@@ -12,5 +12,5 @@ findAnswer = findExpenseSetWhereSumEquals 2020 expenses
 
 main = 
   do
-    print (findAnswer 2)
-    print (findAnswer 3)
+    print (findAnswer 2) -- task 1
+    print (findAnswer 3) -- task 2
