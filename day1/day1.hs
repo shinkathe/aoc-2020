@@ -1,5 +1,6 @@
 import Data.List
 
+-- Generate all unique combinations in list xs of arbitrary size n
 cb _ 0 = [[]]
 cb xs n = (nxs >>= (\(nx, x) -> (x:) <$> (cb [z | (n,z) <- nxs, n>nx] (n-1)) )) where nxs = zip [1..] xs
 
