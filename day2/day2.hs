@@ -11,9 +11,9 @@ parseAnswers (min:max:letter:rest:_) = (answer1, answer2)
     maximum = parseInt max
     ltr = head letter
     c = filter (\(_, idx) -> idx + 1 ==  minimum || idx + 1 == maximum) $ zip rest [0..]
-    answer1 = allPass minimum maximum . length $ filter (\(val) -> val == ltr) rest
     filtered = filter (\(val, _) -> val == ltr) c
     len = length $ filtered
+    answer1 = allPass minimum maximum . length $ filter (\(val) -> val == ltr) rest
     answer2 = (==1) $ len
 
 main = 
